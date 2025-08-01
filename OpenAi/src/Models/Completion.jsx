@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 const Api_key =
-  "Place your API";
+  "place yout API";
 
 function Completion() {
   const [joke, setJoke] = useState("");
@@ -27,8 +27,8 @@ function Completion() {
             },
             {
                 role:"user",
-                content:joke
-            }
+                content:joke,
+            },
 
           ]
         }),
@@ -52,25 +52,27 @@ function Completion() {
   };
   console.log(joke);
   return (
-    <div className="App">
+    
+    <div className="mr-[5rem]">
+     <h1 className="font-bold text-2xl text-center mt-[1rem]">Chat Completion</h1>
         <form type="submit">
       <div>
-        <textarea  
+        <textarea className=" border-b-stone-100 border-[3px] rounded-[1rem] placeholder:text-center"
         style={{margin:"2rem"}}
         value={joke}
-          placeholder="Enter your prompt..."
+          placeholder="Enter your Prompt..."
           onChange={(e) => setJoke(e.target.value)}
           rows={7}
           cols={40}
         />
       </div>
-      <button type="submit" disabled={loading} style={{marginLeft:"4rem"}} onClick={callOpenAiApi}>
+      <button className="ml-32"type="submit" disabled={loading}  onClick={callOpenAiApi}>
       {loading?"Loading...":"Submit"}
       </button >
       </form>
       <br />
 
-      <textarea
+      <textarea className=" border-b-stone-100 border-[3px] rounded-[1rem]"
       readOnly
       style={{marginLeft:"0.5rem"}}
       value={response}
