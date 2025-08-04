@@ -19,7 +19,6 @@ function Completion() {
           Authorization: `Bearer ${Api_key}`,
         },
         body: JSON.stringify({
-          model: "gpt-4o-mini",
           messages:[
             {
                 role:"system",
