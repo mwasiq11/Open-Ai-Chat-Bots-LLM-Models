@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 const Api_key =
-  "place yout API";
+  "place your api";
 
 function Completion() {
   const [joke, setJoke] = useState("");
@@ -19,6 +19,7 @@ function Completion() {
           Authorization: `Bearer ${Api_key}`,
         },
         body: JSON.stringify({
+          model:"gpt-4o-mini",
           messages:[
             {
                 role:"system",
@@ -65,7 +66,7 @@ function Completion() {
           cols={40}
         />
       </div>
-      <button className="ml-32"type="submit" disabled={loading}  onClick={callOpenAiApi}>
+      <button className="ml-32"type="submit" disabled={loading} onClick={callOpenAiApi}>
       {loading?"Loading...":"Submit"}
       </button >
       </form>
