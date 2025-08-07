@@ -1,7 +1,6 @@
 import React, { useState } from "react";
-const Api_key =
-  "place your api";
-
+const Api_key=import.meta.env.VITE_OPENAI_KEY;
+ 
 function Completion() {
   const [joke, setJoke] = useState("");
   const [response, setResponse] = useState("");

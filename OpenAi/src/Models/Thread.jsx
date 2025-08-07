@@ -1,7 +1,6 @@
 import { useState } from "react";
-const Api_key =
-  "place your api";
- const assistant_id = "place your assisstent id";
+const Api_key=import.meta.env.VITE_OPENAI_KEY;
+const assistant_id=import.meta.env.VITE_ASSISSTENT_Id;
 
 function Thread() {
   const [data, setData] = useState("");
@@ -32,7 +31,7 @@ function Thread() {
           Authorization: `Bearer ${Api_key}`,
           "OpenAI-Beta": "assistants=v2",
         },
-        body: JSON.stringify({
+        body: JSON.stringify({       
           role: "user",
           content: data,
         }),
