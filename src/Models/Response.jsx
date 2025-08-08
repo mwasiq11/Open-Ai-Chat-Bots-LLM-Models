@@ -38,6 +38,9 @@ function Response() {
       console.error("Error in the Post request", error);
       return error;
     }
+    finally{
+      setLoading(false)
+    }
   };
   console.log(joke);
   return (

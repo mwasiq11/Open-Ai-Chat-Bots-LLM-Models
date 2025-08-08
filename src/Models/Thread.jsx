@@ -94,6 +94,9 @@ function Thread() {
       console.log("Error in post request", error);
       return error;
     }
+    finally{
+      setLoading(false)
+    }
   };
   console.log(data);
   return (
