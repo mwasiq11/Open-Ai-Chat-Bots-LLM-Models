@@ -1,4 +1,4 @@
-import { useState } from "react";
+import React, { useState } from "react";
 const Api_key=import.meta.env.VITE_OPENAI_KEY;
 const assistant_id=import.meta.env.VITE_ASSISSTENT_Id;
 
