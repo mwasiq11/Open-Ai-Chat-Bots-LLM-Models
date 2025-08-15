@@ -111,7 +111,7 @@ function Thread() {
 
   return (
     <div className="APP">
-      <h1 className="font-bold text-2xl text-center mt-[1rem]">Thread API</h1>
+      <h1 className="font-bold text-center mt-[1rem]">Thread API</h1>
       <form onSubmit={callOpenAiApi}>
         <div>
           <textarea
